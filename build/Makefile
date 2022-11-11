@@ -17,7 +17,7 @@ libxscjson.so:xscjson.o
 	$(CC) -shared -o libxscjson.so xscjson.o $(myArgs)
 
 $(obj):%.o:../src/%.c
-	$(CC) -c $^ -o $@ $(myArgs)
+	$(CC) -c $^ -o $@ $(myArgs) -fPIC
 
 clean:
 	-rm -rf $(obj) $(target)
